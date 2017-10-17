@@ -104,7 +104,7 @@ public class WordCount0 {
       this.name = name;
     }
 
-    public abstract void process(ProcessContext c);
+    public abstract void process(DoFn<A, B>.ProcessContext c);
 
     private void log(String step) {
       System.out.println(
@@ -122,13 +122,13 @@ public class WordCount0 {
     }
 
     @ProcessElement
-    public void processElement(ProcessContext c) {
+    public void processElement(DoFn<A, B>.ProcessContext c) {
       log("ProcessElement");
       process(c);
     }
 
     @FinishBundle
-    public void finishBundle(FinishBundleContext c) {
+    public void finishBundle(DoFn<A, B>.FinishBundleContext c) {
       log("FinishBundle");
     }
 
