@@ -138,3 +138,4 @@ public class WordCount0 {
     }
   }
 }
+// Challenge: rewrite in Scala
